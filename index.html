@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ cá nhân - Kim Huệ</title>
+    <link rel="stylesheet" href="inforbich.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #222;
+}
+
+
+/* MENU */
+
+nav {
+    height: 70px;
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #6c63ff;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #6c63ff;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 70px 10%;
+
+    background: linear-gradient(135deg, #eef0ff, #ffffff);
+}
+
+.hero-text {
+    width: 55%;
+}
+
+.hello {
+    color: #6c63ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #6c63ff;
+}
+
+.hero h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.hero-text > p {
+    line-height: 1.8;
+    max-width: 600px;
+    color: #666;
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 14px 28px;
+
+    background-color: #6c63ff;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 30px;
+
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #5148d8;
+}
+
+
+/* ẢNH */
+
+.hero-image {
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    padding: 8px;
+
+    background: linear-gradient(135deg, #6c63ff, #a99fff);
+
+    box-shadow: 0 15px 40px rgba(108,99,255,0.3);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 90px 10%;
+    background-color: white;
+}
+
+.about > h2,
+.skills > h2,
+.goal > h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+.about-box {
+    display: flex;
+    gap: 40px;
+}
+
+.about-box > div {
+    flex: 1;
+
+    padding: 35px;
+
+    background-color: #f5f7fb;
+
+    border-radius: 20px;
+}
+
+.about-box h3 {
+    color: #6c63ff;
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+
+/* SKILLS */
+
+.skills {
+    padding: 90px 10%;
+    background-color: #f5f7fb;
+}
+
+.skill-container {
+    display: flex;
+    gap: 25px;
+}
+
+.skill {
+    flex: 1;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+
+    margin: auto;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #6c63ff;
+    color: white;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+.skill h3 {
+    margin-bottom: 15px;
+}
+
+.skill p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* GOAL */
+
+.goal {
+    padding: 90px 20%;
+    background-color: white;
+}
+
+.goal-content {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 25px;
+    margin-bottom: 20px;
+
+    border-left: 5px solid #6c63ff;
+
+    background-color: #f5f7fb;
+
+    border-radius: 10px;
+}
+
+.number {
+    font-size: 30px;
+    font-weight: bold;
+    color: #6c63ff;
+}
+
+.goal-content h3 {
+    margin-bottom: 10px;
+}
+
+.goal-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 50px;
+
+    text-align: center;
+
+    background-color: #202036;
+    color: white;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #aaa;
+}
+
+
+/* ĐIỆN THOẠI */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-box,
+    .skill-container {
+        flex-direction: column;
+    }
+
+    .goal {
+        padding: 70px 8%;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Thanh menu -->
+    <nav>
+        <div class="logo">HUỆ</div>
+
+        <div class="menu">
+            <a href="#home">Trang chủ</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#skills">Kỹ năng</a>
+            <a href="#goal">Mục tiêu</a>
+        </div>
+    </nav>
+
+
+    <!-- Phần giới thiệu -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <p class="hello">XIN CHÀO 👋</p>
+
+            <h1>
+                Mình là <span>Kim Huệ</span>
+            </h1>
+
+            <h2>Sinh viên Công nghệ thông tin</h2>
+
+            <p>
+                Mình đang học lập trình và từng bước khám phá
+                thế giới công nghệ. Mình yêu thích việc tạo ra
+                những sản phẩm của riêng mình bằng code.
+            </p>
+
+            <a href="#about" class="button">Khám phá thêm</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="anh_bich.jpg" alt="Ảnh cá nhân">
+        </div>
+
+    </section>
+
+
+    <!-- Giới thiệu -->
+    <section class="about" id="about">
+
+        <h2>Về mình</h2>
+
+        <div class="about-box">
+
+            <div>
+                <h3>Thông tin cá nhân</h3>
+
+                <p><b>Họ tên:</b> Hà Thị Kim Huệ</p>
+                <p><b>Lĩnh vực:</b> Công nghệ thông tin</p>
+                <p><b>Sở thích:</b> Lập trình, khám phá công nghệ</p>
+                <p><b>Định hướng:</b> Phát triển trong lĩnh vực IT</p>
+            </div>
+
+            <div>
+                <h3>Một chút về mình</h3>
+
+                <p>
+                    Mình đang trong quá trình học lập trình từ những
+                    kiến thức cơ bản. Mình đã bắt đầu làm quen với
+                    C++, HTML, CSS và lập trình hướng đối tượng.
+                </p>
+
+                <p>
+                    Mục tiêu của mình là tự xây dựng được những
+                    sản phẩm thực tế và phát triển kỹ năng để làm
+                    việc trong lĩnh vực công nghệ thông tin.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Kỹ năng -->
+    <section class="skills" id="skills">
+
+        <h2>Kỹ năng của mình</h2>
+
+        <div class="skill-container">
+
+            <div class="skill">
+                <div class="icon">C++</div>
+                <h3>C++</h3>
+                <p>
+                    Biết những kiến thức cơ bản về biến,
+                    mảng, con trỏ, hàm, struct và OOP.
+                </p>
+            </div>
+
+            <div class="skill">
+                <div class="icon">HTML</div>
+                <h3>HTML</h3>
+                <p>
+                    Có thể xây dựng cấu trúc cơ bản
+                    cho một trang web.
+                </p>
+            </div>
+
+            <div class="skill">
+                <div class="icon">CSS</div>
+                <h3>CSS</h3>
+                <p>
+                    Đang học cách thiết kế giao diện,
+                    menu, bố cục và responsive.
+                </p>
+            </div>
+
+            <div class="skill">
+                <div class="icon">OOP</div>
+                <h3>OOP</h3>
+                <p>
+                    Đang học lập trình hướng đối tượng
+                    và cách tổ chức chương trình.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Mục tiêu -->
+    <section class="goal" id="goal">
+
+        <h2>Mục tiêu của mình</h2>
+
+        <div class="goal-content">
+
+            <div class="number">01</div>
+
+            <div>
+                <h3>Học lập trình tốt hơn</h3>
+                <p>
+                    Từ những kiến thức cơ bản, mình muốn
+                    xây dựng được những chương trình và
+                    website hoàn chỉnh.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="goal-content">
+
+            <div class="number">02</div>
+
+            <div>
+                <h3>Tạo sản phẩm cá nhân</h3>
+                <p>
+                    Mình muốn tự xây dựng những dự án thực tế
+                    để đưa vào portfolio và CV.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="goal-content">
+
+            <div class="number">03</div>
+
+            <div>
+                <h3>Phát triển trong ngành IT</h3>
+                <p>
+                    Từng bước nâng cao kiến thức và kỹ năng
+                    để làm việc chuyên nghiệp trong lĩnh vực
+                    công nghệ thông tin.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <h2>Thank you for visiting!</h2>
+        <p>© 2026 Kim Huệ</p>
+    </footer>
+
+</body>
+</html>
